@@ -1,0 +1,17 @@
+<div >
+  <div class="question_cover" ng-controller = "eq_controller">
+    <h2 id = "english">english</h2>
+
+
+      <p><span>Q. {{current_id + 1}} </span> {{current_question}}</p>
+      <div ng-repeat="opt in current_options">
+        <input type="checkbox" ng-change="modifyOption()" ng-model = "opt.isAnswer">
+        {{opt.option}}
+        </div>
+      <div>
+        <!-- list: {{current_options}} -->
+      </div>
+    <button ng-click="previous()">previous</button>
+    <button ng-click="next()">next</button>
+  </div>
+</div>

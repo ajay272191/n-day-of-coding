@@ -1,0 +1,19 @@
+{
+  "subjects":[{
+      "id": "math",
+      "name": "mathemetics"
+    },
+    {
+      "id": "physics",
+      "name": "physics"
+    },
+    {
+      "id": "english",
+      "name": "english"
+    },
+    {
+      "id": "chemistry",
+      "name": "chemistry"
+    }
+  ]
+}

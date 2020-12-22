@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title> My Test app</title>
+    <link rel="stylesheet" href="bootstrapCss.css">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script> -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script> -->
+    <script src="./controller/angular.js" ></script>
+    <script src="./controller/angular_route.js"></script>
+    <link rel="stylesheet" href="./app.css">
+    <script src="./controller/app.js" ></script>
+
+  </head>
+
+  <body ng-app = "mainApp" >
+
+
+      <!-- heading -->
+      <div class="row app_heading" ng-controller = "submission_ctrl">
+        <div class="col-3">
+          <button ng-click="submit_ans()">Submit</button>
+        </div>
+        <div class="col-6">
+
+          <h2 ><a href="#" id= "home_link">My Test App</a></h2>
+        </div>
+        <div class="col-3 time_cover">
+          <div>
+            <button type="button" name="button" ng-click = "start_timer()">Start</button>
+          </div>
+          <p><span>Time remains:</span>&nbsp; {{test_time_h}}:{{test_time_m}}:{{test_time_s}}</p>
+
+        </div>
+      </div>
+      <!-- main app area -->
+      <div class="row question_area">
+        <div class="col-3" ng-controller = "subject_info">
+          <div class="subjects_cover">
+            <h4>Subjects</h4>
+            <div class="sujects">
+              <h5 ng-repeat = "subject in subjects">
+                <p ng-repeat = "details in subject">
+                    <a href="#!{{details.name}}" > {{details.name}}</a>
+                 </p>
+              </h5>
+            </div>
+          </div>
+        </div>
+
+        <div ng-view class="col-6"></div>
+
+        <div class="col-3" ng-controller = "profile_info">
+          <div class="profile_cover">
+            <div class="profile_photo" >
+              <img ng-src = {{user.imgUrl}} alt="profile">
+            </div>
+            <div class="profile_info" >
+              <h5>Username: {{user.username}}</h5>
+              <p>Age: {{user.age}}</p>
+              <p><span>Current time : </span>{{ time }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+  </body>
+
+
+</html>

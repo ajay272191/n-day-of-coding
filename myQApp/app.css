@@ -1,0 +1,47 @@
+*{
+  overflow: hidden;
+}
+body{
+  padding: 3%;
+
+}
+/* heading */
+.row{
+  padding:20px 50px;
+}
+.app_heading{
+  display: flex;
+background-color: #4b4b4b33;
+align-items: center;
+}
+.time_cover{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.time_cover p{
+  display: contents;
+}
+button{
+  background: #0d7bffc2;
+  padding: 0 10px;
+  margin: 0 5px;
+  border: 1px solid #3f51b5;
+}
+
+.app_heading h2{
+    text-align: center;
+}
+/* app body */
+.question_area{
+  background-color: #4b4b4b01;
+  margin-top: 20px;
+  padding: 20 60px;
+}
+
+.profile_photo img{
+  width: 100px;
+border-radius: 50%;
+height: 100px;
+margin-bottom: 10px;
+}
